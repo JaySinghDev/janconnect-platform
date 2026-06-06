@@ -12,3 +12,17 @@ Action:
 
 Identify and stop the process that's listening on port 9090 or configure this application to listen on another port.
 
+2026-06-07 01:00:55.483 [main] [] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9090 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9090 or configure this application to listen on another port.
+
