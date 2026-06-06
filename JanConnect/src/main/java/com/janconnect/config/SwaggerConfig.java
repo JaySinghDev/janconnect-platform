@@ -25,9 +25,9 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(apiInfo())
                 .servers(servers())
-                .addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
+                .addSecurityItem(new SecurityRequirement().addList("ApiKeyAuth"))
                 .components(new Components()
-                        .addSecuritySchemes("Bearer Authentication", bearerScheme()));
+                        .addSecuritySchemes("ApiKeyAuth", apiKeyScheme()));
     }
 
     private Info apiInfo() {
@@ -59,11 +59,11 @@ public class SwaggerConfig {
         };
     }
 
-    private SecurityScheme bearerScheme() {
+    private SecurityScheme apiKeyScheme() {
         return new SecurityScheme()
-                .type(SecurityScheme.Type.HTTP)
-                .scheme("bearer")
-                .bearerFormat("JWT")
-                .description("Provide a valid JWT token. Example: Bearer <token>");
+                .type(SecurityScheme.Type.APIKEY)
+                .in(SecurityScheme.In.HEADER)
+                .name("X-API-KEY")
+                .description("Provide a valid API key in the X-API-KEY request header");
     }
 }

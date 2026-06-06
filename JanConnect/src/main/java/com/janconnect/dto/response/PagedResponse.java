@@ -1,6 +1,7 @@
 package com.janconnect.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import org.slf4j.MDC;
@@ -12,11 +13,13 @@ import java.util.List;
 
 @Getter
 @Builder
+@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PagedResponse<T> {
 
     @Builder.Default
     private final LocalDateTime timestamp = LocalDateTime.now();
+
     private final boolean success;
     private final int status;
     private final String message;

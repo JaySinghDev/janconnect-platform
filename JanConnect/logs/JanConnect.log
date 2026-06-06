@@ -1,0 +1,305 @@
+2026-06-07 00:18:12.438 [main] [] INFO  com.janconnect.JanConnectApplication - Starting JanConnectApplication using Java 21.0.6 with PID 16972 (C:\Projects\JanConnect\JanConnect\target\classes started by jay81 in C:\Projects\JanConnect\JanConnect)
+2026-06-07 00:18:12.440 [main] [] DEBUG com.janconnect.JanConnectApplication - Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-07 00:18:12.441 [main] [] INFO  com.janconnect.JanConnectApplication - The following 1 profile is active: "dev"
+2026-06-07 00:18:13.745 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-07 00:18:13.776 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2026-06-07 00:18:14.423 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-06-07 00:18:14.435 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:18:14.437 [main] [] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-07 00:18:14.437 [main] [] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-07 00:18:14.507 [main] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-07 00:18:14.508 [main] [] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2013 ms
+2026-06-07 00:18:14.715 [main] [] DEBUG o.s.w.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-06-07 00:18:14.715 [main] [] DEBUG c.janconnect.security.ApiKeyAuthFilter - Filter 'apiKeyAuthFilter' configured for use
+2026-06-07 00:18:14.715 [main] [] DEBUG com.janconnect.security.TraceIdFilter - Filter 'traceIdFilter' configured for use
+2026-06-07 00:18:14.767 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Starting...
+2026-06-07 00:18:15.100 [main] [] INFO  com.zaxxer.hikari.pool.HikariPool - JanConnectPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@6654ca0d
+2026-06-07 00:18:15.101 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Start completed.
+2026-06-07 00:18:15.204 [main] [] INFO  o.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-07 00:18:15.266 [main] [] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-07 00:18:15.345 [main] [] INFO  o.h.c.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-07 00:18:15.704 [main] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-07 00:18:15.872 [main] [] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-07 00:18:15.901 [main] [] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (JanConnectPool)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-07 00:18:16.284 [main] [] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-07 00:18:16.291 [main] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07 00:18:16.478 [main] [] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-07 00:18:16.605 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+2026-06-07 00:18:16.699 [main] [] DEBUG o.s.w.s.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-07 00:18:16.824 [main] [] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoints beneath base path '/actuator'
+2026-06-07 00:18:16.853 [main] [] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: afe3f53b-05b8-422c-899c-04e921b54ffe
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-07 00:18:16.863 [main] [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-07 00:18:16.978 [main] [] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, ApiKeyAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-06-07 00:18:17.029 [main] [] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-06-07 00:18:17.063 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-07 00:18:17.115 [main] [] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-07 00:18:17.440 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:18:17.472 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-06-07 00:18:17.493 [main] [] INFO  com.janconnect.JanConnectApplication - Started JanConnectApplication in 5.899 seconds (process running for 6.549)
+2026-06-07 00:20:31.617 [main] [] INFO  com.janconnect.JanConnectApplication - Starting JanConnectApplication using Java 21.0.11 with PID 14740 (C:\Projects\JanConnect\JanConnect\target\classes started by jay81 in C:\Projects\JanConnect\JanConnect)
+2026-06-07 00:20:31.619 [main] [] DEBUG com.janconnect.JanConnectApplication - Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-07 00:20:31.619 [main] [] INFO  com.janconnect.JanConnectApplication - The following 1 profile is active: "dev"
+2026-06-07 00:20:32.530 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-07 00:20:32.568 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2026-06-07 00:20:33.042 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-06-07 00:20:33.053 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:20:33.053 [main] [] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-07 00:20:33.055 [main] [] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-07 00:20:33.109 [main] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-07 00:20:33.110 [main] [] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1460 ms
+2026-06-07 00:20:33.219 [main] [] DEBUG o.s.w.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-06-07 00:20:33.220 [main] [] DEBUG c.janconnect.security.ApiKeyAuthFilter - Filter 'apiKeyAuthFilter' configured for use
+2026-06-07 00:20:33.220 [main] [] DEBUG com.janconnect.security.TraceIdFilter - Filter 'traceIdFilter' configured for use
+2026-06-07 00:20:33.253 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Starting...
+2026-06-07 00:20:33.413 [main] [] INFO  com.zaxxer.hikari.pool.HikariPool - JanConnectPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@60f662bd
+2026-06-07 00:20:33.414 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Start completed.
+2026-06-07 00:20:33.481 [main] [] INFO  o.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-07 00:20:33.547 [main] [] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-07 00:20:33.585 [main] [] INFO  o.h.c.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-07 00:20:33.799 [main] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-07 00:20:33.872 [main] [] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-07 00:20:33.887 [main] [] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (JanConnectPool)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-07 00:20:34.179 [main] [] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-07 00:20:34.187 [main] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07 00:20:34.303 [main] [] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-07 00:20:34.369 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+2026-06-07 00:20:34.431 [main] [] DEBUG o.s.w.s.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-07 00:20:34.519 [main] [] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoints beneath base path '/actuator'
+2026-06-07 00:20:34.544 [main] [] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9ee97be7-93d8-4906-98a6-0d7f924ec5db
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-07 00:20:34.551 [main] [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-07 00:20:34.614 [main] [] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, ApiKeyAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-06-07 00:20:34.651 [main] [] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-06-07 00:20:34.676 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-07 00:20:34.713 [main] [] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-07 00:20:34.908 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:20:34.914 [main] [] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-07 00:20:34.916 [main] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07 00:20:34.919 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Shutdown initiated...
+2026-06-07 00:20:34.945 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Shutdown completed.
+2026-06-07 00:20:34.959 [main] [] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-07 00:20:34.973 [main] [] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9090 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9090 or configure this application to listen on another port.
+
+2026-06-07 00:21:06.490 [background-preinit] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-07 00:21:06.532 [main] [] INFO  com.janconnect.JanConnectApplication - Starting JanConnectApplication using Java 21.0.11 with PID 10188 (C:\Projects\JanConnect\JanConnect\target\classes started by jay81 in C:\Projects\JanConnect\JanConnect)
+2026-06-07 00:21:06.532 [main] [] DEBUG com.janconnect.JanConnectApplication - Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-07 00:21:06.533 [main] [] INFO  com.janconnect.JanConnectApplication - The following 1 profile is active: "dev"
+2026-06-07 00:21:07.349 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-07 00:21:07.370 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2026-06-07 00:21:07.780 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-06-07 00:21:07.791 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:21:07.793 [main] [] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-07 00:21:07.793 [main] [] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-07 00:21:07.853 [main] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-07 00:21:07.854 [main] [] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1287 ms
+2026-06-07 00:21:07.969 [main] [] DEBUG o.s.w.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-06-07 00:21:07.973 [main] [] DEBUG c.janconnect.security.ApiKeyAuthFilter - Filter 'apiKeyAuthFilter' configured for use
+2026-06-07 00:21:07.974 [main] [] DEBUG com.janconnect.security.TraceIdFilter - Filter 'traceIdFilter' configured for use
+2026-06-07 00:21:08.005 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Starting...
+2026-06-07 00:21:08.133 [main] [] INFO  com.zaxxer.hikari.pool.HikariPool - JanConnectPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b3a6e95
+2026-06-07 00:21:08.134 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Start completed.
+2026-06-07 00:21:08.195 [main] [] INFO  o.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-07 00:21:08.262 [main] [] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-07 00:21:08.294 [main] [] INFO  o.h.c.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-07 00:21:08.524 [main] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-07 00:21:08.605 [main] [] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-07 00:21:08.625 [main] [] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (JanConnectPool)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-07 00:21:08.915 [main] [] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-07 00:21:08.919 [main] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07 00:21:09.023 [main] [] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-07 00:21:09.097 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+2026-06-07 00:21:09.159 [main] [] DEBUG o.s.w.s.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-07 00:21:09.248 [main] [] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoints beneath base path '/actuator'
+2026-06-07 00:21:09.277 [main] [] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 76f681d5-1ab4-458f-a725-54b9e2a24f32
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-07 00:21:09.284 [main] [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-07 00:21:09.361 [main] [] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, ApiKeyAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-06-07 00:21:09.420 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-07 00:21:09.465 [main] [] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-07 00:21:09.719 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:21:09.745 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-06-07 00:21:09.756 [main] [] INFO  com.janconnect.JanConnectApplication - Started JanConnectApplication in 3.771 seconds (process running for 4.034)
+2026-06-07 00:21:20.162 [http-nio-9090-exec-1] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-07 00:21:20.163 [http-nio-9090-exec-1] [] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-07 00:21:20.165 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-06-07 00:21:20.165 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-06-07 00:21:20.166 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-06-07 00:21:20.172 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7307ae6
+2026-06-07 00:21:20.174 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@563bd6a4
+2026-06-07 00:21:20.175 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-06-07 00:21:20.176 [http-nio-9090-exec-1] [] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2026-06-07 00:21:20.216 [http-nio-9090-exec-1] [5a6a1aedf1ed4c50] DEBUG o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2026-06-07 00:21:20.310 [http-nio-9090-exec-3] [33258987dba8487e] DEBUG o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2026-06-07 00:21:22.041 [http-nio-9090-exec-4] [79461419608d4d32] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-06-07 00:22:02.086 [background-preinit] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-07 00:22:02.129 [main] [] INFO  com.janconnect.JanConnectApplication - Starting JanConnectApplication using Java 21.0.11 with PID 18924 (C:\Projects\JanConnect\JanConnect\target\classes started by jay81 in C:\Projects\JanConnect\JanConnect)
+2026-06-07 00:22:02.130 [main] [] DEBUG com.janconnect.JanConnectApplication - Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-07 00:22:02.131 [main] [] INFO  com.janconnect.JanConnectApplication - The following 1 profile is active: "dev"
+2026-06-07 00:22:02.989 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-07 00:22:03.017 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2026-06-07 00:22:03.473 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-06-07 00:22:03.484 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:22:03.486 [main] [] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-07 00:22:03.487 [main] [] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-07 00:22:03.547 [main] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-07 00:22:03.548 [main] [] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1382 ms
+2026-06-07 00:22:03.654 [main] [] DEBUG o.s.w.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-06-07 00:22:03.654 [main] [] DEBUG c.janconnect.security.ApiKeyAuthFilter - Filter 'apiKeyAuthFilter' configured for use
+2026-06-07 00:22:03.655 [main] [] DEBUG com.janconnect.security.TraceIdFilter - Filter 'traceIdFilter' configured for use
+2026-06-07 00:22:03.696 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Starting...
+2026-06-07 00:22:03.981 [main] [] INFO  com.zaxxer.hikari.pool.HikariPool - JanConnectPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f0e2bdc
+2026-06-07 00:22:03.983 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool - Start completed.
+2026-06-07 00:22:04.045 [main] [] INFO  o.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-07 00:22:04.098 [main] [] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-07 00:22:04.130 [main] [] INFO  o.h.c.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-07 00:22:04.356 [main] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-07 00:22:04.465 [main] [] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-07 00:22:04.481 [main] [] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (JanConnectPool)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-07 00:22:04.800 [main] [] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-07 00:22:04.804 [main] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07 00:22:04.913 [main] [] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-07 00:22:04.990 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+2026-06-07 00:22:05.055 [main] [] DEBUG o.s.w.s.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-07 00:22:05.160 [main] [] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoints beneath base path '/actuator'
+2026-06-07 00:22:05.191 [main] [] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 53b7da2e-7be3-4fa4-aca7-3d672865ecfd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-07 00:22:05.197 [main] [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-07 00:22:05.266 [main] [] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, ApiKeyAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-06-07 00:22:05.334 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-07 00:22:05.371 [main] [] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-07 00:22:05.649 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:22:05.674 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-06-07 00:22:05.683 [main] [] INFO  com.janconnect.JanConnectApplication - Started JanConnectApplication in 4.094 seconds (process running for 4.384)
+2026-06-07 00:22:26.455 [http-nio-9090-exec-1] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-07 00:22:26.455 [http-nio-9090-exec-1] [] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-07 00:22:26.456 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-06-07 00:22:26.456 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-06-07 00:22:26.456 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-06-07 00:22:26.457 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1ee126de
+2026-06-07 00:22:26.457 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1028a747
+2026-06-07 00:22:26.458 [http-nio-9090-exec-1] [] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-06-07 00:22:26.458 [http-nio-9090-exec-1] [] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-06-07 00:22:26.476 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2026-06-07 00:22:26.486 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-07 00:22:26.491 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.security.web.FilterChainProxy - Secured GET /actuator/health
+2026-06-07 00:22:26.493 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.web.servlet.DispatcherServlet - GET "/actuator/health", parameters={}
+2026-06-07 00:22:26.510 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/octet-stream" to []
+2026-06-07 00:22:26.532 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-06-07 00:22:26.564 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@2c109ee9]
+2026-06-07 00:22:26.586 [http-nio-9090-exec-1] [0e00a44914f74f41] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-07 00:22:26.628 [http-nio-9090-exec-2] [02cf20ff9df242ab] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-06-07 00:22:26.629 [http-nio-9090-exec-2] [02cf20ff9df242ab] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-07 00:22:26.630 [http-nio-9090-exec-2] [02cf20ff9df242ab] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-06-07 00:22:26.630 [http-nio-9090-exec-2] [02cf20ff9df242ab] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-06-07 00:22:26.631 [http-nio-9090-exec-2] [02cf20ff9df242ab] DEBUG o.s.w.s.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-07 00:22:26.678 [http-nio-9090-exec-2] [02cf20ff9df242ab] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-07 00:22:26.719 [http-nio-9090-exec-3] [cf6c2c6eb0ca4b51] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/test
+2026-06-07 00:41:10.751 [background-preinit] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-07 00:41:10.806 [main] [] INFO  com.janconnect.JanConnectApplication - Starting JanConnectApplication using Java 21.0.6 with PID 19352 (C:\Projects\JanConnect\JanConnect\target\classes started by jay81 in C:\Projects\JanConnect\JanConnect)
+2026-06-07 00:41:10.807 [main] [] DEBUG com.janconnect.JanConnectApplication - Running with Spring Boot v3.5.14, Spring v6.2.18
+2026-06-07 00:41:10.807 [main] [] INFO  com.janconnect.JanConnectApplication - The following 1 profile is active: "dev"
+2026-06-07 00:41:12.176 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-07 00:41:12.197 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2026-06-07 00:41:12.694 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2026-06-07 00:41:12.705 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:41:12.707 [main] [] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-07 00:41:12.707 [main] [] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-06-07 00:41:12.785 [main] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-07 00:41:12.786 [main] [] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1943 ms
+2026-06-07 00:41:12.919 [main] [] DEBUG o.s.w.filter.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-06-07 00:41:12.919 [main] [] DEBUG c.janconnect.security.ApiKeyAuthFilter - Filter 'apiKeyAuthFilter' configured for use
+2026-06-07 00:41:12.921 [main] [] DEBUG com.janconnect.security.TraceIdFilter - Filter 'traceIdFilter' configured for use
+2026-06-07 00:41:12.976 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool-Dev - Starting...
+2026-06-07 00:41:13.355 [main] [] INFO  com.zaxxer.hikari.pool.HikariPool - JanConnectPool-Dev - Added connection com.mysql.cj.jdbc.ConnectionImpl@44a93f8a
+2026-06-07 00:41:13.357 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - JanConnectPool-Dev - Start completed.
+2026-06-07 00:41:13.437 [main] [] INFO  o.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-07 00:41:13.530 [main] [] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-06-07 00:41:13.563 [main] [] INFO  o.h.c.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-07 00:41:13.806 [main] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-07 00:41:13.944 [main] [] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-07 00:41:13.960 [main] [] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (JanConnectPool-Dev)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-07 00:41:14.234 [main] [] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-07 00:41:14.239 [main] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-07 00:41:14.381 [main] [] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-07 00:41:14.465 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+2026-06-07 00:41:14.539 [main] [] DEBUG o.s.w.s.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-07 00:41:14.638 [main] [] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 5 endpoints beneath base path '/actuator'
+2026-06-07 00:41:14.668 [main] [] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 98167abc-0613-409e-a4c3-1c3d6b781bc2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-07 00:41:14.676 [main] [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-07 00:41:14.760 [main] [] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, ApiKeyAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-06-07 00:41:14.826 [main] [] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-07 00:41:14.864 [main] [] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-07 00:41:15.147 [main] [] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2026-06-07 00:41:15.177 [main] [] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2026-06-07 00:41:15.187 [main] [] INFO  com.janconnect.JanConnectApplication - Started JanConnectApplication in 5.009 seconds (process running for 5.333)

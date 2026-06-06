@@ -38,6 +38,9 @@ public class DatabaseConfig {
     @Value("${spring.datasource.hikari.max-lifetime:1200000}")
     private long maxLifetime;
 
+    @Value("${spring.datasource.hikari.pool-name:JanConnectPool}")
+    private String poolName;
+
     @Bean
     public DataSource dataSource() {
         HikariConfig config = new HikariConfig();
@@ -50,7 +53,7 @@ public class DatabaseConfig {
         config.setConnectionTimeout(connectionTimeout);
         config.setIdleTimeout(idleTimeout);
         config.setMaxLifetime(maxLifetime);
-        config.setPoolName("JanConnectPool");
+        config.setPoolName(poolName);
         return new HikariDataSource(config);
     }
 }

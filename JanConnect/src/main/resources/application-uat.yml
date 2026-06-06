@@ -13,13 +13,13 @@ spring:
       max-lifetime: 1200000
 
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: validate
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.MySQLDialect
 
 logging:
   level:
