@@ -8,9 +8,9 @@
 
     <!-- Patterns -->
     <property name="FILE_PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n"/>
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{traceId}] %-5level %logger{40} - %msg%n"/>
     <property name="CONSOLE_PATTERN"
-              value="%d{HH:mm:ss.SSS} %highlight(%-5level) %cyan([%thread]) %boldWhite(%logger{36}) - %msg%n"/>
+              value="%d{HH:mm:ss.SSS} %highlight(%-5level) %cyan([%thread]) %yellow([%X{traceId}]) %boldWhite(%logger{36}) - %msg%n"/>
 
     <!-- ═══════════════════════════════════════════════════════
          APPENDERS
