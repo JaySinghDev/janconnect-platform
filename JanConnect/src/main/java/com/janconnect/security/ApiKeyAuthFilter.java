@@ -43,6 +43,12 @@ public class ApiKeyAuthFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
 
+        // JWT filter already authenticated this request — skip API-key check
+        if (SecurityContextHolder.getContext().getAuthentication() != null) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         String providedKey = request.getHeader(headerName);
 
         if (providedKey != null && providedKey.equals(apiKey)) {

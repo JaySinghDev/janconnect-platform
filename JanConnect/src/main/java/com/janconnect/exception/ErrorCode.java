@@ -11,7 +11,10 @@ public enum ErrorCode {
     BUSINESS_ERROR("ERR_007", "Business rule violation"),
     FILE_UPLOAD_FAILED("ERR_008", "File upload failed"),
     EXTERNAL_SERVICE_ERROR("ERR_009", "External service error"),
-    INTERNAL_SERVER_ERROR("ERR_010", "Internal server error");
+    INTERNAL_SERVER_ERROR("ERR_010", "Internal server error"),
+    INVALID_TOKEN("ERR_011", "Invalid or malformed token"),
+    EXPIRED_TOKEN("ERR_012", "Authentication token has expired"),
+    TOKEN_NOT_FOUND("ERR_013", "Authentication token not provided");
 
     private final String code;
     private final String description;

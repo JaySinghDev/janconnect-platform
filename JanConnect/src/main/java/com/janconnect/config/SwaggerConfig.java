@@ -25,8 +25,11 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(apiInfo())
                 .servers(servers())
-                .addSecurityItem(new SecurityRequirement().addList("ApiKeyAuth"))
+                .addSecurityItem(new SecurityRequirement()
+                        .addList("BearerAuth")
+                        .addList("ApiKeyAuth"))
                 .components(new Components()
+                        .addSecuritySchemes("BearerAuth", bearerScheme())
                         .addSecuritySchemes("ApiKeyAuth", apiKeyScheme()));
     }
 
@@ -57,6 +60,14 @@ public class SwaggerConfig {
                     new Server().url("http://localhost:9090").description("Local Dev")
             );
         };
+    }
+
+    private SecurityScheme bearerScheme() {
+        return new SecurityScheme()
+                .type(SecurityScheme.Type.HTTP)
+                .scheme("bearer")
+                .bearerFormat("JWT")
+                .description("Provide the JWT access token obtained from POST /api/v1/auth/login");
     }
 
     private SecurityScheme apiKeyScheme() {

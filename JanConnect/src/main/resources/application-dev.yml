@@ -32,6 +32,15 @@ api:
     key: janconnect-dev-api-key-d3v@2024
     header-name: X-API-KEY
 
+security:
+  aes:
+    key: Throttle Key
+
+jwt:
+  secret: janconnect-dev-jwt-secret-key-2024
+  expiration-ms: 3600000
+  refresh-expiration-ms: 604800000
+
 management:
   endpoints:
     web:
