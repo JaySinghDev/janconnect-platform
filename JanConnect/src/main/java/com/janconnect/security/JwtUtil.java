@@ -48,6 +48,10 @@ public class JwtUtil {
         return jwtProperties.getExpirationMs();
     }
 
+    public java.time.Instant getExpiration(String token) {
+        return parseClaims(token).getExpiration().toInstant();
+    }
+
     private String buildToken(UserDetails userDetails, long expirationMs) {
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)

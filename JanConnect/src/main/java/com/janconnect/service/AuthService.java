@@ -1,8 +1,11 @@
 package com.janconnect.service;
 
+import com.janconnect.dto.request.ForgotPasswordRequest;
 import com.janconnect.dto.request.LoginRequest;
 import com.janconnect.dto.request.RefreshTokenRequest;
 import com.janconnect.dto.request.RegisterRequest;
+import com.janconnect.dto.request.ResetPasswordRequest;
+import com.janconnect.dto.response.OtpResponse;
 import com.janconnect.dto.response.TokenResponse;
 import com.janconnect.dto.response.UserResponse;
 
@@ -16,4 +19,13 @@ public interface AuthService {
 
     /** Exchange a valid refresh token for a new access + refresh token pair. */
     TokenResponse refreshToken(RefreshTokenRequest request);
+
+    /** Generate and store a 6-digit OTP for the given email. */
+    OtpResponse forgotPassword(ForgotPasswordRequest request);
+
+    /** Validate OTP and update the user's password. */
+    void resetPassword(ResetPasswordRequest request);
+
+    /** Blacklist the given access token, effectively invalidating the session. */
+    void logout(String accessToken);
 }

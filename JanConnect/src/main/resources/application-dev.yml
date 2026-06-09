@@ -36,6 +36,10 @@ security:
   aes:
     key: Throttle Key
 
+cors:
+  allowed-origins:
+    - http://localhost:4200
+
 jwt:
   secret: janconnect-dev-jwt-secret-key-2024
   expiration-ms: 3600000

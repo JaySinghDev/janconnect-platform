@@ -23,7 +23,8 @@ public class ApiKeyAuthFilter extends OncePerRequestFilter {
     private static final AntPathMatcher PATH_MATCHER = new AntPathMatcher();
     private static final Set<String> PUBLIC_PATHS = Set.of(
             "/actuator/health", "/actuator/info",
-            "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**"
+            "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**",
+            "/api/v1/auth/**"
     );
 
     @Value("${api.security.key}")

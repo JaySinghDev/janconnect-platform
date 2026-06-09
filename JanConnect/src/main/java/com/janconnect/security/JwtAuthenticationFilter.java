@@ -28,8 +28,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private static final String BEARER_PREFIX = "Bearer ";
     private static final String TRACE_ID      = "traceId";
 
-    private final JwtUtil                     jwtUtil;
+    private final JwtUtil                      jwtUtil;
     private final JanConnectUserDetailsService userDetailsService;
+    private final TokenBlacklistService        tokenBlacklistService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,
@@ -44,6 +45,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         String token = authHeader.substring(BEARER_PREFIX.length());
+
+        if (tokenBlacklistService.isBlacklisted(token)) {
+            log.warn("[{}] Blacklisted token rejected on {} {}",
+                    MDC.get(TRACE_ID), request.getMethod(), request.getRequestURI());
+            chain.doFilter(request, response);
+            return;
+        }
 
         try {
             String username = jwtUtil.extractUsername(token);
